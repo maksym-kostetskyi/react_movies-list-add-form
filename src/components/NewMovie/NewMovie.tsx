@@ -93,7 +93,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
         value={newImgUrl}
         onChange={value => {
           setNewImgUrl(value);
-          handleOnChange(value, newTitle, newImdbUrl, newImdbId);
+          handleOnChange(newTitle, value, newImdbUrl, newImdbId);
         }}
         required={true}
       />
@@ -104,7 +104,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
         value={newImdbUrl}
         onChange={value => {
           setNewImdbUrl(value);
-          handleOnChange(value, newImgUrl, newTitle, newImdbId);
+          handleOnChange(newTitle, newImgUrl, value, newImdbId);
         }}
         required={true}
       />
@@ -115,7 +115,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
         value={newImdbId}
         onChange={value => {
           setNewImdbId(value);
-          handleOnChange(value, newImgUrl, newImdbUrl, newTitle);
+          handleOnChange(newTitle, newImgUrl, newImdbUrl, value);
         }}
         required={true}
       />
